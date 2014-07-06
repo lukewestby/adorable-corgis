@@ -1,0 +1,31 @@
+header {
+	position: absolute;
+	top: $header-margin-desktop;
+	left: $header-margin-desktop;
+	z-index: $header-z-index;
+
+	width: auto;
+	height: $header-height-desktop;
+	padding: 0px $header-padding-desktop;
+
+	line-height: $header-height-desktop;
+	font-size: $header-height-desktop / 4;
+
+	background-color: $header-background-color-desktop;
+	color: $header-heading-text-color;
+}
+
+@media(max-width: 768px) {
+	header {
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: $header-height-tablet;
+
+		line-height: $header-height-tablet;
+		text-align: center;
+
+		background-color: black;
+	}
+}

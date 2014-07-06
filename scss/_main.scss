@@ -1,0 +1,17 @@
+main {
+	position: absolute;
+	z-index: $main-z-index;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+@media(max-width: 768px) {
+	main {
+		height: -webkit-calc(100% - #{$header-height-tablet});
+		height: calc(100% - #{$header-height-tablet});
+		top: $header-height-tablet;
+	}
+}
