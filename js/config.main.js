@@ -63,7 +63,6 @@ require([
 		})();
 	}
 
-
 	$.fn.updateProgress = function (fraction) {
 		var $rightMask = $(this).find('.right-half .mask');
 		var $leftMask = $(this).find('.left-half .mask');
@@ -83,6 +82,10 @@ require([
 			$leftMask.css('rotate', leftDegrees);
 		});
 	};
+
+	if(isMobile) {
+		$('body').addClass('mobile');
+	}
 
 	require(['main']);
 });

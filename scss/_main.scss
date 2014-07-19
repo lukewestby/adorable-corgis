@@ -8,7 +8,7 @@ main {
 	width: 100%;
 }
 
-@media(max-width: 768px) {
+.mobile {
 	main {
 		height: -webkit-calc(100% - #{$header-height-tablet});
 		height: calc(100% - #{$header-height-tablet});
