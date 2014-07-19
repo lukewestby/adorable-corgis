@@ -84,15 +84,23 @@
 	}
 }
 
+// .mobile {
+// 	.corgi-collection-view {
+
+// 		.previous, .next {
+// 			height: 40px;
+// 			width: 40px;
+// 			margin-top: -20px;
+// 			line-height: 40px;
+// 			font-size: 1.5em;
+// 		}
+// 	}
+// }
+
 .mobile {
 	.corgi-collection-view {
-
 		.previous, .next {
-			height: 40px;
-			width: 40px;
-			margin-top: -20px;
-			line-height: 40px;
-			font-size: 1.5em;
+			display: none;
 		}
 	}
 }

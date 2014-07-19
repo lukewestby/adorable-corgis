@@ -1,25 +1,32 @@
 define([
 	'backbone',
 	'corgiCollection',
-	'corgiCollectionView'
-], function (Backbone, CorgiCollection, CorgiCollectionView) {
+	'corgiCollectionView',
+	'mobileInstructionsView'
+], function (Backbone, CorgiCollection, CorgiCollectionView, MobileInstructionsView) {
 
 	var corgiCollection = new CorgiCollection();
 
 	var view = new CorgiCollectionView({ collection: corgiCollection });
 	Backbone.$('main').html(view.render().el);
 	
-	document.ontouchstart = function (ev) {
-		ev.preventDefault();
-	};
+	if(isMobile && !localStorage.getItem('instructionsSeen')) {
 
-	document.ontouchmove = function (ev) {
-		ev.preventDefault();
-	};
+		var mobileInstructionsView = new MobileInstructionsView();
+		Backbone.$('body').append(mobileInstructionsView.render().el);
 
-	window.ondeviceorientation = function () {
-		window.scrollTo(0, 0);
-	};
+		document.ontouchstart = function (ev) {
+			ev.preventDefault();
+		};
+
+		document.ontouchmove = function (ev) {
+			ev.preventDefault();
+		};
+
+		window.ondeviceorientation = function () {
+			window.scrollTo(0, 0);
+		};
+	}
 
 	corgiCollection.fetch();
 });
