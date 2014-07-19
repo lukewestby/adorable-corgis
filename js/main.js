@@ -11,7 +11,11 @@ define([
 	
 	document.ontouchstart = function (ev) {
 		ev.preventDefault();
-	}
+	};
+
+	document.ontouchmove = function (ev) {
+		ev.preventDefault();
+	};
 
 	corgiCollection.fetch();
 });
