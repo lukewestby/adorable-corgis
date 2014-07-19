@@ -1,17 +1,13 @@
 define([
 	'backbone',
-	'corgi-collection',
-	'corgi-collection-view'
+	'corgiCollection',
+	'corgiCollectionView'
 ], function (Backbone, CorgiCollection, CorgiCollectionView) {
-	
-	var app = new Backbone.Marionette.Application();
-	app.addRegions({
-		mainRegion: 'main'
-	});
 
 	var corgiCollection = new CorgiCollection();
-	var corgiCollectionView = new CorgiCollectionView({ collection: corgiCollection });
-	app.mainRegion.show(corgiCollectionView);
+
+	var view = new CorgiCollectionView({ collection: corgiCollection });
+	Backbone.$('main').html(view.render().el);
+
 	corgiCollection.fetch();
-	console.log(corgiCollectionView.itemViewContainer);
 });

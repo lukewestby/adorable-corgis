@@ -1,4 +1,4 @@
-$ionicons-font-path: "bower_components/ionicons/fonts";
+$ionicons-font-path: "/dist/fonts";
 @import "bower_components/ionicons/scss/ionicons";
 
 .hidden {
@@ -9,5 +9,5 @@ $ionicons-font-path: "bower_components/ionicons/fonts";
 @import "resets";
 @import "header";
 @import "main";
-@import "corgi-view";
+@import "corgi-model-view";
 @import "corgi-collection-view";
