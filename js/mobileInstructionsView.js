@@ -13,6 +13,7 @@ define([
 		},
 
 		events: {
+			'click button': 'onButtonTap',
 			'tap button': 'onButtonTap'
 		},
 
