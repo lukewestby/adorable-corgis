@@ -135,7 +135,7 @@ define([
 			this._previousPageModelViews = this._currentPageModelViews;
 			this._currentPageModelViews = this._nextPageModelViews;
 			this.renderNextPage();
-			if(this.currentPage === 1) this.ui.previous.show();
+			if(this.currentPage === 1) this.ui.previous.removeClass('hidden');
 			ev.preventDefault();
 		},
 
@@ -143,7 +143,7 @@ define([
 			if(this.currentPage === 0) return;
 			this.currentPage --;
 			this.currentCorgiIndex -= this.pageSize;
-			if(this.currentPage === 0) this.ui.previous.hide();
+			if(this.currentPage === 0) this.ui.previous.addClass('hidden');
 			this.releaseModelViews(this._nextPageModelViews);
 			this.$('.page:last-child').remove();
 			this._nextPageModelViews = this._currentPageModelViews;
