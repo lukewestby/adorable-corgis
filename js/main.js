@@ -15,13 +15,13 @@ define([
 		var mobileInstructionsView = new MobileInstructionsView();
 		Backbone.$('body').append(mobileInstructionsView.render().el);
 
-		document.ontouchstart = function (ev) {
+		Backbone.$('body').on('touchstart', function (ev) {
 			ev.preventDefault();
-		};
+		});
 
-		document.ontouchmove = function (ev) {
+		Backbone.$('body').on('touchmove', function (ev) {
 			ev.preventDefault();
-		};
+		});
 
 		window.ondeviceorientation = function () {
 			window.scrollTo(0, 0);
