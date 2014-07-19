@@ -17,5 +17,9 @@ define([
 		ev.preventDefault();
 	};
 
+	window.ondeviceorientation = function () {
+		window.scrollTo(0, 0);
+	};
+
 	corgiCollection.fetch();
 });
