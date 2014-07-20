@@ -51,6 +51,21 @@ require([
 	var mobileDetect = new MobileDetect(navigator.userAgent);
 	window.isMobile = mobileDetect.phone();
 
+	if(isMobile) {
+		
+		document.ontouchstart = function (ev) {
+			ev.preventDefault();
+		};
+
+		document.ontouchmove = function (ev) {
+			ev.preventDefault();
+		};
+
+		$(window).on('orientationchange', function () {
+			window.scrollTo(0, 0);
+		});
+	}
+
 	if ( !window.requestAnimationFrame ) {
 
 		window.requestAnimationFrame = (function() {

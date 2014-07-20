@@ -13,11 +13,11 @@ define([
 		},
 
 		events: {
-			'click button': 'onButtonTap',
 			'tap button': 'onButtonTap'
 		},
 
 		onButtonTap: function () {
+			console.log('hello');
 			window.localStorage.setItem('instructionsSeen', true);
 			var _this = this;
 			this.$el.fadeOut(function () {

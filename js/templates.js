@@ -26,7 +26,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"image\"></div>\r\n<div class=\"message\">\r\n	<h3>Swipe left to see more or right to go back.</h3>\r\n	<button>Got it!</button>\r\n</div>\r\n";
+  return "<div class=\"image\"></div>\r\n<div class=\"message\">\r\n	<h3>Swipe left to see more or right to go back.</h3>\r\n	<button ontouchstart=\"\">Got it!</button>\r\n</div>\r\n";
   });
 
 return this["JST"];
