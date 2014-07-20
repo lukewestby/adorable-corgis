@@ -119,7 +119,7 @@ define([
 			this.renderPreviousPage();
 			this.renderCurrentPage();
 			this.renderNextPage();
-			this.ui.previous.toggle(this.currentPage !== 0);
+			this.ui.previous.toggleClass('hidden', this.currentPage === 0);
 		},
 
 		nextPage: function (ev) {
